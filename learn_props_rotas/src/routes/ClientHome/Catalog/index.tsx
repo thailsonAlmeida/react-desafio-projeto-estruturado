@@ -1,8 +1,8 @@
-import ButtonInversa from "../../components/ButtonInverse";
-import ButtonPrimary from "../../components/ButtonPrimary";
-import ProductDetailsCard from "../../components/ProductDetailsCard";
-import { ProductDTO } from "../../models/product";
-import "./styles.css";
+import ButtonNextPage from "../../../components/ButtonNextPage";
+import CatalogCard from "../../../components/CatalogCard";
+import SearchBar from "../../../components/SearchBar";
+import { ProductDTO } from "../../../models/product";
+import './styles.css';
 
 
 const product: ProductDTO = {
@@ -29,15 +29,21 @@ const product: ProductDTO = {
   ],
 };
 
-export default function ProductDetails() {
+export default function Catalog() {
   return (
     <main>
-      <section id="product-details-section" className="dsc-container">
-        <ProductDetailsCard product={product} />
-        <div className="dsc-btn-page-container">
-          <ButtonPrimary text="Comprar" />
-          <ButtonInversa text="Listar" />
+      <section id="catalog-section" className="dsc-container">
+        <SearchBar />
+        <div className="dsc-catalog-cards dsc-mb20 dsc-mt20">
+          <CatalogCard product={product} />
+          <CatalogCard product={product} />
+          <CatalogCard product={product} />
+          <CatalogCard product={product} />
+          <CatalogCard product={product} />
+          <CatalogCard product={product} />
+          <CatalogCard product={product} />
         </div>
+        <ButtonNextPage />
       </section>
     </main>
   );
