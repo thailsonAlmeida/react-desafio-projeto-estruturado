@@ -6,9 +6,11 @@ import "./styles.css";
 
 import { Link } from "react-router-dom";
 import { ContextToken } from "../../utils/context-token";
+import LoggedUser from "../LoggedUser";
 
 export default function HeaderClient() {
   const { contextTokenPayload } = useContext(ContextToken);
+  
   return (
     <header className="dsc-header-client">
       <nav className="dsc-container">
@@ -33,7 +35,7 @@ export default function HeaderClient() {
               </div>
             </Link>
           </div>
-          <Link to={"/login"}>Entrar</Link>
+          <LoggedUser />
         </div>
       </nav>
     </header>
