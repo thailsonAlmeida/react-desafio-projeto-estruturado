@@ -6,6 +6,7 @@ import "./styles.css";
 import { ProductDTO } from "../../../models/product";
 import SearchBar from "../../../components/SearchBar";
 import ButtonNextPage from "../../../components/ButtonNextPage";
+import DialogInfo from "../../../components/DialogInfo";
 
 type QueryParams = {
   page: number;
@@ -75,7 +76,7 @@ export default function ProductListing() {
                   />
                 </td>
                 <td className="dsc-tb768">R$ {product.price.toFixed(2)}</td>
-                <td className="dsc-txt-left">{product.description}</td>
+                <td className="dsc-txt-left">{product.name}</td>
                 <td>
                   <img
                     className="dsc-product-listing-btn"
@@ -101,6 +102,7 @@ export default function ProductListing() {
         }
         
       </section>
+      <DialogInfo />
     </main>
   );
 }
