@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import "./styles.css";
 import { useEffect, useState } from "react";
 import FormInput from "../../../components/FormInput";
@@ -70,6 +70,8 @@ export default function ProductForm() {
 
   const isEditing = params.productId !== 'create';
 
+  const navigate = useNavigate();
+
   useEffect(() => {
     categoryService.findAllRequest()
       .then(response => {
@@ -102,7 +104,18 @@ export default function ProductForm() {
       setFormData(formDataValidated);
       return;
     }
-    //console.log(forms.toValues(formData));
+    const requestBody = forms.toValues(formData);
+    if(isEditing){
+      requestBody.id = params.productId;
+    }
+
+    const request = isEditing 
+      ? productService.updateRequest(requestBody)
+      : productService.insertRequest(requestBody);
+    request
+      .then(() => {
+        navigate("/admin/products");
+      })
   }
   
   return (
