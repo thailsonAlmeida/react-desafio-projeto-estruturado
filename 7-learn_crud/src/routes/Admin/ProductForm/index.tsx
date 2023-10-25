@@ -1,9 +1,10 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import "./styles.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import FormInput from "../../../components/FormInput";
 import * as forms from "../../../utils/forms";
+import * as productService from "../../../services/product-service";
 
 export default function ProductForm() {
   
@@ -30,6 +31,20 @@ export default function ProductForm() {
       placeholder: "Imagem",
     },
   });
+
+  const params = useParams();
+
+  const isEditing = params.productId !== 'create';
+
+  useEffect(() => {
+    if (isEditing) {
+      productService.findById(Number(params.productId))
+      .then(response => {
+        const newFormData = forms.updateAll(formData, response.data);
+        setFormData(newFormData);
+      })
+    }
+  },[])
 
   function handleInputChange(event: any) {
     const value = event.target.value;
