@@ -17,11 +17,13 @@ export default function ProductForm() {
       placeholder: "Nome",
     },
     price: {
-      value: "",
+      value: 200,
       id: "price",
       name: "price",
       type: "number",
       placeholder: "Preço",
+      validation: function(value: any){return Number(value) > 0},
+      message: "Informar um preço positivo",
     },
     imgUrl: {
       value: "",
@@ -37,6 +39,9 @@ export default function ProductForm() {
   const isEditing = params.productId !== 'create';
 
   useEffect(() => {
+    const obj = forms.validate(formData, 'price');
+    console.log(obj);
+    
     if (isEditing) {
       productService.findById(Number(params.productId))
       .then(response => {
