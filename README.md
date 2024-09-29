@@ -39,8 +39,10 @@
 - Exibição e controle de janela modal.
 
 ## Modelo Conceitual
+![UML](https://raw.githubusercontent.com/thailsonAlmeida/react-desafio-projeto-estruturado/refs/heads/master/src/assets/software-engineer/uml.png)
 
 ## Casos de Uso
+![Caso de Uso](https://raw.githubusercontent.com/thailsonAlmeida/react-desafio-projeto-estruturado/refs/heads/master/src/assets/software-engineer/caso-uso.png)
 
 ## Protótipo
 [Figma](https://www.figma.com/design/ZrGNVNG0kZL6txDv4G8P6s/DSCommerce?node-id=2-2&node-type=frame&t=7r5oGK2h6B5qwArI-0)
