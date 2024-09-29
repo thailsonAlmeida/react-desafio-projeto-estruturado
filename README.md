@@ -1,7 +1,7 @@
 
 # DESAFIO Projeto React estruturado
-- Projeto desenvolvido no curso Desenvolvimento React Profissional da DevSuperior. 
-- Aulas ministradas por Nélio Alves. ![ver](https://devsuperior.com.br/)
+- Projeto desenvolvido no curso React Profissional da [DevSuperior](https://devsuperior.com.br/). 
+- Aulas ministradas por Nélio Alves.
 
 ## Requisitos
 - Pelo menos 20 commits no Github com seu usuário.
@@ -42,4 +42,4 @@
 - Java, Spring Boot
 
 # Autor
-![Linkedin: thailsonAlmeida](https://www.linkedin.com/in/thailsonalmeida/)
+[Linkedin: thailsonAlmeida](https://www.linkedin.com/in/thailsonalmeida/)
