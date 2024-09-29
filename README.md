@@ -2,6 +2,7 @@
 # DESAFIO Projeto React estruturado
 - Projeto desenvolvido no curso React Profissional da [DevSuperior](https://devsuperior.com.br/). 
 - Aulas ministradas por Nélio Alves.
+- [Acessar Projeto](https://react-commerce-reactjs-tha.netlify.app/)
 
 ## Requisitos
 - Pelo menos 20 commits no Github com seu usuário.
@@ -37,8 +38,16 @@
 
 - Exibição e controle de janela modal.
 
+## Modelo Conceitual
+
+## Casos de Uso
+
+## Protótipo
+[Figma](https://www.figma.com/design/ZrGNVNG0kZL6txDv4G8P6s/DSCommerce?node-id=2-2&node-type=frame&t=7r5oGK2h6B5qwArI-0)
+
 # Tecnologias
 - ReactJS
+- API
 - Java, Spring Boot
 
 # Autor
